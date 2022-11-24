@@ -1,0 +1,20 @@
+# write a python function that takes an argument list, of strings and returns a tuple containing two lists.
+# The first list should contain, strings whose length is less than or equal to 4
+# The second list should contain, strings whose length is greater than or qual to 7
+# using the list below:
+
+data = ['1234', '123456', '12345678910', '1234567', '013', '011', '8543210', '12345', '1238974']
+
+item1 = []
+item2 = []
+def tuple_of_items(arg):
+    x = 0
+    while x < len(arg):
+        if len(arg[x]) <= 4:
+            item1.append(arg[x])
+        elif len(arg[x]) >= 7:
+            item2.append(arg[x])
+        x = x+1
+    new_tuple = (item1,item2)
+    print(new_tuple)
+tuple_of_items(data)
